@@ -7,6 +7,7 @@ const CustomText = () => {
     return (
         <Text3D font={"./fonts/helvetiker_regular.typeface.json"}>
             LOREM IPSUM
+            <meshNormalMaterial />
         </Text3D>
     );
 };
