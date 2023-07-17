@@ -1,8 +1,8 @@
 import React from "react";
-import { Center } from "@react-three/drei";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Center, meshBounds } from "@react-three/drei";
 import { Perf } from "r3f-perf";
 import CustomText from "../CustomText/CustomText";
+import Diamond from "../Diamond/Diamond";
 
 const Experience = () => {
     return (
@@ -22,6 +22,22 @@ const Experience = () => {
                     bevelSegments={5}
                 />
             </Center>
+            {[...Array(100)].map((value, index) => (
+                <Diamond
+                    key={index}
+                    rotation={[
+                        Math.random() * Math.PI,
+                        Math.random() * Math.PI,
+                        Math.random() * Math.PI,
+                    ]}
+                    position={[
+                        (Math.random() - 0.5) * 10,
+                        (Math.random() - 0.5) * 10,
+                        (Math.random() - 0.5) * 10,
+                    ]}
+                    scale={0.2 + Math.random() * 0.2}
+                />
+            ))}
         </>
     );
 };
