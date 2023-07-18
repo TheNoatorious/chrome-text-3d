@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { OrbitControls, Center, meshBounds } from "@react-three/drei";
+import { OrbitControls, Center } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { Perf } from "r3f-perf";
 import CustomText from "../CustomText/CustomText";
