@@ -5,13 +5,14 @@ import { Text3D } from "@react-three/drei";
 
 const CustomText = ({ font, ...props }) => {
     const matcapTexture = useLoader(TextureLoader, "./matcaps/30.png");
+    const text: string = "lorem ipsum";
 
     return (
         <Text3D
             font={font || "./fonts/helvetiker_regular.typeface.json"}
             {...props}
         >
-            lorem ipsum
+            {text}
             <meshMatcapMaterial matcap={matcapTexture} />
         </Text3D>
     );
